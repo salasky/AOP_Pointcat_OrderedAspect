@@ -9,8 +9,9 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Order(30)
 public class ThrowAspect {
-    @Before("AOP.aspects.Poincat.AllMethodNotReturn()")
+    @Before("AOP.aspects.Poincat.AllAddMethod()")
     public void beforeGetBookAdvice() {
-        System.out.println("beforeGetBookAdvice: Logging#3");
+        System.out.println("beforeAddBookAdvice: Throw#3");
+        System.out.println("---------------------------------");
     }
 }

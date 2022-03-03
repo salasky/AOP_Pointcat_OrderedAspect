@@ -1,21 +1,23 @@
 package AOP.aspects;
 
-import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.stereotype.Component;
 
 
 public class Poincat {
-    @Pointcut("execution(* get*())")
-    public void AllGetMethod(){
+    @Pointcut("execution(* add*(..))")
+    public void AllAddMethod(){
     }
 
     @Pointcut("execution(* return*())")
     public void AllReturnMethod(){
     }
-
-    @Pointcut("AllGetMethod() && !AllReturnMethod()")
-    public void AllMethodNotReturn(){
-
+    @Pointcut("execution(* get*())")
+    public void AllGetMethod(){
     }
+    //комбинирование аспектов
+    @Pointcut("AllAddMethod() && !AllReturnMethod()")
+    public void AllMethodNotReturn(){
+    }
+
+
 }

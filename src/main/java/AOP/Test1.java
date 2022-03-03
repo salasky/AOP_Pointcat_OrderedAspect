@@ -9,8 +9,12 @@ public class Test1 {
 
         var library = context.getBean("libraryBean", Library.class);
         //Вызов метода, к которому прикреплен Advice метод
+
+        Book book=context.getBean("book",Book.class);
+
+        library.addBook("Salavat",book);
+        library.addMagazine();
         library.getBook();
-        library.getMagazine();
         library.returnBook();
         library.returnMagazine();
         context.close();

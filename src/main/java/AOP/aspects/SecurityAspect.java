@@ -9,8 +9,9 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Order(20)
 public class SecurityAspect {
-    @Before("AOP.aspects.Poincat.AllMethodNotReturn()")
-    public void beforeGetBookAdvice() {
-        System.out.println("beforeGetBookAdvice: Logging#2");
+    @Before("AOP.aspects.Poincat.AllAddMethod()")
+    public void beforeAddBookAdvice() {
+        System.out.println("beforeAddBookAdvice: Security#2");
+        System.out.println("---------------------------------");
     }
 }
