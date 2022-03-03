@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 //Для использования аннотаций Aspect необходим пакет AspecJ weaver
 @Component
 @Aspect
-@Order(1)
+@Order(10)
 public class LoggingAspect {
 
     @Before("AOP.aspects.Poincat.AllMethodNotReturn()")

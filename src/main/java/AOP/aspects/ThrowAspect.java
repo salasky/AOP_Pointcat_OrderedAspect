@@ -7,10 +7,10 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Aspect
-@Order(20)
-public class SecurityAspect {
+@Order(30)
+public class ThrowAspect {
     @Before("AOP.aspects.Poincat.AllMethodNotReturn()")
     public void beforeGetBookAdvice() {
-        System.out.println("beforeGetBookAdvice: Logging#2");
+        System.out.println("beforeGetBookAdvice: Logging#3");
     }
 }
