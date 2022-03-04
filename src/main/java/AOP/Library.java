@@ -11,9 +11,9 @@ public class Library {
         System.out.println("Мы берем книгу");
         System.out.println("---------------------------------");
     }
-    public void returnBook(){
+    public String returnBook(){
         System.out.println("Возвращаем книгу");
-        System.out.println("---------------------------------");
+        return "Война и Мир";
     }
     public void getMagazine() {
         System.out.println("Мы берем журнал");
